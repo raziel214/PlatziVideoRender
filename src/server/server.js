@@ -35,7 +35,11 @@ if (ENV === 'development') {
     next();
   });
   app.use(express.static(`${__dirname}/public`));
+  //app.use(helmet({ contentSecurityPolicy: false, }));
   app.use(helmet());
+  app.use(
+    helmet({contentSecurityPolicy: false,})
+  );
   app.use(helmet.permittedCrossDomainPolicies());
   app.disable('x-powered-by');
 }

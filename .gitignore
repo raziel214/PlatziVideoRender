@@ -74,5 +74,5 @@ yarn-error.log
 
 # Build
 dist/
-
+#ignore server
 src/server/public
